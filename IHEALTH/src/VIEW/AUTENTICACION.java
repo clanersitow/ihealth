@@ -8,7 +8,7 @@ public class AUTENTICACION extends javax.swing.JFrame {
     
     public AUTENTICACION() {
         initComponents();
-        OAutenticacion OAutenticacion= new OAutenticacion();
+        OAutenticacion OAutenticacion= new OAutenticacion(login,usuario,contraseña);
         atras.addActionListener(OAutenticacion);
     }
     @SuppressWarnings("unchecked")
