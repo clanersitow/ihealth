@@ -11,7 +11,7 @@ public class OPrincipal implements ActionListener{
     JButton especialidades;
     JButton medico;
     JButton directorio;
-    
+   
     public OPrincipal(JButton a,JButton b,JButton c,JButton d,JButton e) {
         this.login=a;
         this.registrarse=b;
