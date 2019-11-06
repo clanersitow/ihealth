@@ -8,6 +8,10 @@ public class AUTENTICACION extends javax.swing.JFrame {
     
     public AUTENTICACION() {
         initComponents();
+        
+        setTitle("AUTENTICACION");
+        setLocation(250,200);
+        
         OAutenticacion OAutenticacion= new OAutenticacion(login,usuario,contraseña);
         atras.addActionListener(OAutenticacion);
     }
