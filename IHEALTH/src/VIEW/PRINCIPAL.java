@@ -1,10 +1,17 @@
 package VIEW;
 
+import CONTROLLER.OPrincipal;
+import java.awt.event.ActionListener;
+
 public class PRINCIPAL extends javax.swing.JFrame {
 
+    OPrincipal OPrincipal;
     public PRINCIPAL() {
         initComponents();
         jLabel1.setLayout(null);
+        OPrincipal = new OPrincipal(login,registrarse,especialidades,medico,directorio);
+        login.addActionListener(OPrincipal);
+        registrarse.addActionListener(OPrincipal);
         
     }
     @SuppressWarnings("unchecked")

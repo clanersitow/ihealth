@@ -17,6 +17,7 @@ public class REGISTRO extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        atras = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,6 +43,9 @@ public class REGISTRO extends javax.swing.JFrame {
         jLabel4.setText("Correo:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
 
+        atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/ATRAS.jpg"))); // NOI18N
+        getContentPane().add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 30, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/register.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 290));
 
@@ -61,6 +65,7 @@ public class REGISTRO extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras;
     private javax.swing.JTextField contraseña;
     private javax.swing.JTextField correo;
     private javax.swing.JLabel jLabel1;
