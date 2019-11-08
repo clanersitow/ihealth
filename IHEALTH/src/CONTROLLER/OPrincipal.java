@@ -8,16 +8,16 @@ public class OPrincipal implements ActionListener{
     JButton opc ;
     JButton login ;
     JButton registrarse;
-    JButton especialidades;
-    JButton medico;
-    JButton directorio;
-    
+    JButton eventos;
+    JButton medicos;
+    JButton instalaciones;
+   
     public OPrincipal(JButton a,JButton b,JButton c,JButton d,JButton e) {
         this.login=a;
         this.registrarse=b;
-        this.especialidades=c;
-        this.medico=d;
-        this.directorio=e;
+        this.eventos=c;
+        this.medicos=d;
+        this.instalaciones=e;
     }
     
     @Override
@@ -34,17 +34,17 @@ public class OPrincipal implements ActionListener{
             registro.setVisible(true);
         }
         
-        if(opc==especialidades){
+        if(opc==instalaciones){
             AUTENTICACION login = new AUTENTICACION();
             login.setVisible(true);
         }
         
-        if(opc==medico){
+        if(opc==medicos){
             AUTENTICACION login = new AUTENTICACION();
             login.setVisible(true);
         }
         
-        if(opc==directorio){
+        if(opc==eventos){
             AUTENTICACION login = new AUTENTICACION();
             login.setVisible(true);
         }
