@@ -1,6 +1,7 @@
 package VIEW;
 
 import CONTROLLER.OAutenticacion;
+import javax.swing.*;
 
 public class AUTENTICACION extends javax.swing.JFrame {
 
@@ -9,26 +10,37 @@ public class AUTENTICACION extends javax.swing.JFrame {
     public AUTENTICACION() {
         initComponents();
         
-        setTitle("AUTENTICACION");
-        setLocation(250,200);
+        setTitle("LOGIN");
+        setLocation(250,40);
         
-        OAutenticacion OAutenticacion= new OAutenticacion(login,usuario,contraseña);
-        atras.addActionListener(OAutenticacion);
+        OAutenticacion OAutenticacion= new OAutenticacion();
+        login.addActionListener(OAutenticacion);
+        
+//        ButtonGroup botones = new ButtonGroup();
+//        botones.add(paciente);
+//        botones.add(medico);
+//        botones.add(recepcionista);
+//        botones.add(paciente);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         login = new javax.swing.JButton();
         usuario = new javax.swing.JTextField();
         contraseña = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        atras = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        paciente = new javax.swing.JRadioButton();
+        medico = new javax.swing.JRadioButton();
+        recepcionista = new javax.swing.JRadioButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(830, 630));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         login.setText("LOGIN");
@@ -37,36 +49,48 @@ public class AUTENTICACION extends javax.swing.JFrame {
                 loginActionPerformed(evt);
             }
         });
-        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, 20));
+        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, 20));
 
         usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 100, -1));
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 150, -1));
 
         contraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contraseñaActionPerformed(evt);
             }
         });
-        getContentPane().add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 100, 20));
+        getContentPane().add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 150, 20));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/FLogin.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 70, 20));
-
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Contraseña:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Usuario:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, 30));
 
-        atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/ATRAS.jpg"))); // NOI18N
-        getContentPane().add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 40, 30));
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Tipo de Usuario");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 140, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/LOGIN.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 310));
+        paciente.setText("Paciente");
+        getContentPane().add(paciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+
+        medico.setText("Medico");
+        getContentPane().add(medico, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, -1, -1));
+
+        recepcionista.setText("Recepcionista");
+        getContentPane().add(recepcionista, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, -1, -1));
+
+        jRadioButton1.setText("jRadioButton1");
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/LOGIN_1.PNG"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -93,13 +117,17 @@ public class AUTENTICACION extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton atras;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField contraseña;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JButton login;
+    private javax.swing.JRadioButton medico;
+    private javax.swing.JRadioButton paciente;
+    private javax.swing.JRadioButton recepcionista;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 

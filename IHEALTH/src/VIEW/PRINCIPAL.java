@@ -9,7 +9,10 @@ public class PRINCIPAL extends javax.swing.JFrame {
     public PRINCIPAL() {
         initComponents();
         jLabel1.setLayout(null);
-        OPrincipal = new OPrincipal(login,registrarse,especialidades,medico,directorio);
+        setTitle("IHEALTH");
+        setLocation(250,40);
+        
+        OPrincipal = new OPrincipal(login,registrarse,eventos,medicos,intalaciones);
         login.addActionListener(OPrincipal);
         registrarse.addActionListener(OPrincipal);
         
@@ -19,12 +22,10 @@ public class PRINCIPAL extends javax.swing.JFrame {
     private void initComponents() {
 
         registrarse = new javax.swing.JButton();
-        especialidades = new javax.swing.JButton();
-        medico = new javax.swing.JButton();
-        directorio = new javax.swing.JButton();
+        eventos = new javax.swing.JButton();
+        medicos = new javax.swing.JButton();
+        intalaciones = new javax.swing.JButton();
         login = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -37,34 +38,34 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 registrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 10, 110, 30));
+        getContentPane().add(registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, 110, 30));
 
-        especialidades.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
-        especialidades.setText("ESPECIALIDADES");
-        especialidades.addActionListener(new java.awt.event.ActionListener() {
+        eventos.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        eventos.setText("EVENTOS");
+        eventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                especialidadesActionPerformed(evt);
+                eventosActionPerformed(evt);
             }
         });
-        getContentPane().add(especialidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 160, 30));
+        getContentPane().add(eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 90, 20));
 
-        medico.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
-        medico.setText("MEDICO");
-        medico.addActionListener(new java.awt.event.ActionListener() {
+        medicos.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        medicos.setText("MEDICOS");
+        medicos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                medicoActionPerformed(evt);
+                medicosActionPerformed(evt);
             }
         });
-        getContentPane().add(medico, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 130, 30));
+        getContentPane().add(medicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 90, 20));
 
-        directorio.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
-        directorio.setText("DIRECTORIO");
-        directorio.addActionListener(new java.awt.event.ActionListener() {
+        intalaciones.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        intalaciones.setText("INSTALACIONES");
+        intalaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                directorioActionPerformed(evt);
+                intalacionesActionPerformed(evt);
             }
         });
-        getContentPane().add(directorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 140, 30));
+        getContentPane().add(intalaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, 20));
 
         login.setFont(new java.awt.Font("Times New Roman", 3, 11)); // NOI18N
         login.setText("LOGIN");
@@ -73,31 +74,25 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 loginActionPerformed(evt);
             }
         });
-        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 80, 30));
+        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 80, 30));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/FPrincipal.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 130, 20));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/FPrincipal.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, 90, 20));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/PRINCIPAL.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 730));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/PRINCIPAL.PNG"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void especialidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_especialidadesActionPerformed
+    private void eventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eventosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_especialidadesActionPerformed
+    }//GEN-LAST:event_eventosActionPerformed
 
-    private void directorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_directorioActionPerformed
+    private void intalacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intalacionesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_directorioActionPerformed
+    }//GEN-LAST:event_intalacionesActionPerformed
 
-    private void medicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicoActionPerformed
+    private void medicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_medicoActionPerformed
+    }//GEN-LAST:event_medicosActionPerformed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
@@ -118,13 +113,11 @@ public class PRINCIPAL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton directorio;
-    private javax.swing.JButton especialidades;
+    private javax.swing.JButton eventos;
+    private javax.swing.JButton intalaciones;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton login;
-    private javax.swing.JButton medico;
+    private javax.swing.JButton medicos;
     private javax.swing.JButton registrarse;
     // End of variables declaration//GEN-END:variables
 
