@@ -10,7 +10,7 @@ import CONTROLLER.*;
 
 public class AUTENTICACION extends javax.swing.JFrame {
 
-    OAutenticacion OAutenticacion;
+  //  OAutenticacion OAutenticacion;
     public AUTENTICACION() {
         initComponents();
 

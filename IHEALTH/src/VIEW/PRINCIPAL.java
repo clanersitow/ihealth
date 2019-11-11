@@ -4,13 +4,13 @@ import java.awt.event.ActionListener;
 
 public class PRINCIPAL extends javax.swing.JFrame {
 
-    OPrincipal OPrincipal;
+ //   OPrincipal OPrincipal;
     public PRINCIPAL() {
         initComponents();
 
         setLocation(250,40);
         
-        OPrincipal = new OPrincipal(login,registrarse,eventos,medicos,intalaciones);
+        OPrincipal OPrincipal= new OPrincipal(login,registrarse,eventos,medicos,intalaciones);
         login.addActionListener(OPrincipal);
         registrarse.addActionListener(OPrincipal);
         intalaciones.addActionListener(OPrincipal);
