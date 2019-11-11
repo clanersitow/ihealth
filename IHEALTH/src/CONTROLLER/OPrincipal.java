@@ -35,8 +35,10 @@ public class OPrincipal implements ActionListener{
         }
         
         if(opc==instalaciones){
+            
             DIRECTORIO hospitales = new DIRECTORIO();
             hospitales.setVisible(true);
+            
             
         }
         

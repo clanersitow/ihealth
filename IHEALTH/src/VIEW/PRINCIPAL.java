@@ -104,6 +104,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
 
     private void intalacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intalacionesActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_intalacionesActionPerformed
 
     private void medicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicosActionPerformed
@@ -113,7 +114,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
 //        AUTENTICACION login = new AUTENTICACION();
-//        login.setVisible(true);
+       
     }//GEN-LAST:event_loginActionPerformed
 
     private void registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarseActionPerformed
@@ -123,7 +124,9 @@ public class PRINCIPAL extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PRINCIPAL().setVisible(true);
+                PRINCIPAL principal = new PRINCIPAL();
+                principal.setVisible(true);
+               // new PRINCIPAL().setVisible(true);
             }
         });
     }
