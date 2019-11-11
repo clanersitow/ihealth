@@ -16,8 +16,7 @@ public class AUTENTICACION extends javax.swing.JFrame {
     OAutenticacion OAutenticacion;
     public AUTENTICACION() {
         initComponents();
-        
-        setTitle("LOGIN");
+
         setLocation(550,200);
         
         OAutenticacion OAutenticacion= new OAutenticacion();
@@ -48,6 +47,7 @@ public class AUTENTICACION extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("LOGIN");
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

@@ -1,11 +1,11 @@
 package VIEW;
+import CONTROLLER.*;
 
 public class REGISTRO extends javax.swing.JFrame {
 
     public REGISTRO() {
         initComponents();
-        
-        setTitle("REGISTRO");
+
         setLocation(450,150);
     }
 
@@ -32,6 +32,7 @@ public class REGISTRO extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("FORMULARIO DE REGISTRO");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ok.setText("Enviar Registro");

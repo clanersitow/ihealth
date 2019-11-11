@@ -1,6 +1,5 @@
 package VIEW;
-
-import CONTROLLER.OPrincipal;
+import CONTROLLER.*;
 import java.awt.event.ActionListener;
 
 public class PRINCIPAL extends javax.swing.JFrame {
@@ -8,13 +7,14 @@ public class PRINCIPAL extends javax.swing.JFrame {
     OPrincipal OPrincipal;
     public PRINCIPAL() {
         initComponents();
-        setTitle("IHEALTH");
+
         setLocation(250,40);
         
         OPrincipal = new OPrincipal(login,registrarse,eventos,medicos,intalaciones);
         login.addActionListener(OPrincipal);
         registrarse.addActionListener(OPrincipal);
-        
+        intalaciones.addActionListener(OPrincipal);
+        medicos.addActionListener(OPrincipal);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -29,6 +29,8 @@ public class PRINCIPAL extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("IHEALTH");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

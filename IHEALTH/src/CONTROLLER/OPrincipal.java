@@ -35,13 +35,14 @@ public class OPrincipal implements ActionListener{
         }
         
         if(opc==instalaciones){
-            AUTENTICACION login = new AUTENTICACION();
-            login.setVisible(true);
+            DIRECTORIO hospitales = new DIRECTORIO();
+            hospitales.setVisible(true);
+            
         }
         
         if(opc==medicos){
-            AUTENTICACION login = new AUTENTICACION();
-            login.setVisible(true);
+            MEDICOS medicos = new MEDICOS();
+            medicos.setVisible(true);
         }
         
         if(opc==eventos){
