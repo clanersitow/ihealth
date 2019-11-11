@@ -20,19 +20,19 @@ public class CARTELERA extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
         evento1 = new javax.swing.JButton();
         evento2 = new javax.swing.JButton();
         evento3 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        titulo = new javax.swing.JTextField();
+        descripcion = new javax.swing.JTextField();
+        fecha = new javax.swing.JTextField();
+        ubicacion = new javax.swing.JTextField();
+        hora = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -48,7 +48,6 @@ public class CARTELERA extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 180, 30));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 170, 30));
 
         evento1.setText("Ver");
         jPanel1.add(evento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, -1));
@@ -59,13 +58,6 @@ public class CARTELERA extends javax.swing.JFrame {
         evento3.setText("Ver");
         jPanel1.add(evento3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 490, 90));
-
         jLabel2.setText("Titulo:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, -1, -1));
 
@@ -74,15 +66,23 @@ public class CARTELERA extends javax.swing.JFrame {
 
         jLabel4.setText("Fecha:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, -1, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 170, 30));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 490, 70));
 
         jLabel5.setText("Ubicacion:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, -1, -1));
 
         jLabel6.setText("Hora:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, -1, -1));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 160, 30));
+        jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 170, 30));
+
+        descripcion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descripcionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 490, 90));
+        jPanel1.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 170, 30));
+        jPanel1.add(ubicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 490, 70));
+        jPanel1.add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 160, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/MEDICOS.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -105,9 +105,9 @@ public class CARTELERA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_descripcionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,9 +146,12 @@ public class CARTELERA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField descripcion;
     private javax.swing.JButton evento1;
     private javax.swing.JButton evento2;
     private javax.swing.JButton evento3;
+    private javax.swing.JTextField fecha;
+    private javax.swing.JTextField hora;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -159,10 +162,7 @@ public class CARTELERA extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField titulo;
+    private javax.swing.JTextField ubicacion;
     // End of variables declaration//GEN-END:variables
 }
