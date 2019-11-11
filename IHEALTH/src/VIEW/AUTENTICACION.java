@@ -7,10 +7,7 @@ package VIEW;
 
 import CONTROLLER.*;
 
-/**
- *
- * @author Alumno
- */
+
 public class AUTENTICACION extends javax.swing.JFrame {
 
     OAutenticacion OAutenticacion;
