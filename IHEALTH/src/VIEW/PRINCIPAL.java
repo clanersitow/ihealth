@@ -8,7 +8,6 @@ public class PRINCIPAL extends javax.swing.JFrame {
     OPrincipal OPrincipal;
     public PRINCIPAL() {
         initComponents();
-        jLabel1.setLayout(null);
         setTitle("IHEALTH");
         setLocation(250,40);
         
@@ -21,15 +20,17 @@ public class PRINCIPAL extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         registrarse = new javax.swing.JButton();
         eventos = new javax.swing.JButton();
         medicos = new javax.swing.JButton();
         intalaciones = new javax.swing.JButton();
         login = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         registrarse.setFont(new java.awt.Font("Times New Roman", 3, 11)); // NOI18N
         registrarse.setText("REGISTRARSE");
@@ -38,7 +39,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 registrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, 110, 30));
+        jPanel1.add(registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, 110, 30));
 
         eventos.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         eventos.setText("EVENTOS");
@@ -47,7 +48,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 eventosActionPerformed(evt);
             }
         });
-        getContentPane().add(eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 90, 20));
+        jPanel1.add(eventos, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 90, 20));
 
         medicos.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         medicos.setText("MEDICOS");
@@ -56,7 +57,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 medicosActionPerformed(evt);
             }
         });
-        getContentPane().add(medicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 90, 20));
+        jPanel1.add(medicos, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 90, 20));
 
         intalaciones.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         intalaciones.setText("INSTALACIONES");
@@ -65,7 +66,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 intalacionesActionPerformed(evt);
             }
         });
-        getContentPane().add(intalaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, 20));
+        jPanel1.add(intalaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, 20));
 
         login.setFont(new java.awt.Font("Times New Roman", 3, 11)); // NOI18N
         login.setText("LOGIN");
@@ -74,10 +75,23 @@ public class PRINCIPAL extends javax.swing.JFrame {
                 loginActionPerformed(evt);
             }
         });
-        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 80, 30));
+        jPanel1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 80, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/PRINCIPAL.PNG"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 630));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/PRINCIPAL.PNG"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 630));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 3, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,7 +129,8 @@ public class PRINCIPAL extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton eventos;
     private javax.swing.JButton intalaciones;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login;
     private javax.swing.JButton medicos;
     private javax.swing.JButton registrarse;
