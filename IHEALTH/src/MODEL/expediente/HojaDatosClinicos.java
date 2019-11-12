@@ -10,10 +10,10 @@ package MODEL.expediente;
  * @author ortega
  */
 public class HojaDatosClinicos extends Documento{
-    int peso;
-    String tipoSanguineo;
-    int presionArterial;
-    int talla;
+    public int peso;
+    public String tipoSanguineo;
+    public int presionArterial;
+    public int talla;
     
     public HojaDatosClinicos(String idDocumento, String matriculaPaciente, int peso, String tipoSanguineo, int presionArterial, int talla) {
         super(idDocumento, matriculaPaciente);

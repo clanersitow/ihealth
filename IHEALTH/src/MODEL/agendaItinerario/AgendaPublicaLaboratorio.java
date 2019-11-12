@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class AgendaPublicaLaboratorio extends Agenda{
-    String idLaboratorio;
+    public String idLaboratorio;
     
     public AgendaPublicaLaboratorio(){
         super();

@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 
 public class ExpedienteMedico {
-    ArrayList<Documento> documentos;
+    public ArrayList<Documento> documentos;
     
     public ExpedienteMedico(){
         documentos = new ArrayList<Documento>();

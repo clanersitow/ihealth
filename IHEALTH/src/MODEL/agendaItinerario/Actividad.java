@@ -3,12 +3,12 @@ package MODEL.agendaItinerario;
 
 
 public class Actividad {
-    String idActividad;
-    String numeroEmpleado;
-    String titulo;
-    String descripcion;
-    String fecha;
-    String hora;
+    public String idActividad;
+    public String numeroEmpleado;
+    public String titulo;
+    public String descripcion;
+    public String fecha;
+    public String hora;
     
     
     public Actividad(String idActividad, String numeroEmpleado, String titulo, String descripcion, String fecha, String hora){
