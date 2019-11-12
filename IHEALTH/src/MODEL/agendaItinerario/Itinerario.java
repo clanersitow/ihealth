@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Itinerario {
-    ArrayList<Actividad> actividades;
+    public ArrayList<Actividad> actividades;
     
     public Itinerario(){
         this.actividades = new ArrayList<Actividad>();

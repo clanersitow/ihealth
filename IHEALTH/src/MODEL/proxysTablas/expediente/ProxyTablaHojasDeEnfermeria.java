@@ -4,7 +4,7 @@ import  MODEL.expediente.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ProxyTablaHojasDeEnfermeira {
+public class ProxyTablaHojasDeEnfermeria {
     
     public static ArrayList<HojaDeEnfermeria> getHojasDeEnfermeria(String matriculaPaciente){
         ArrayList<HojaDeEnfermeria> hojas = null;

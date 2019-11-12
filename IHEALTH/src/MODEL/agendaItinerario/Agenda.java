@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Agenda {
-    ArrayList<Cita> citas;
+    public ArrayList<Cita> citas;
     
     
     public Agenda(){

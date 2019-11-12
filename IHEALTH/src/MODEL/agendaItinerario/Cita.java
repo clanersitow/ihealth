@@ -3,15 +3,15 @@ package MODEL.agendaItinerario;
 
 
 public class Cita {
-    String idCita;
-    String maticulaPaciente;
-    String idCentroDeTrabajo;
-    String nombreDoctor;
-    String titulo;
-    String descripcion;
-    String fecha;
-    String hora;
-    boolean status; /*1 = actica, 0 = cancelada */
+    public String idCita;
+    public String maticulaPaciente;
+    public String idCentroDeTrabajo;
+    public String nombreDoctor;
+    public String titulo;
+    public String descripcion;
+    public String fecha;
+    public String hora;
+    public boolean status; /*1 = actica, 0 = cancelada */
     
     
     public Cita(String idCita, String matriculaPaciente, String nombreDoctor, String idCentroDeTrabajo, String titulo, String descripcion, String fecha, String hora){

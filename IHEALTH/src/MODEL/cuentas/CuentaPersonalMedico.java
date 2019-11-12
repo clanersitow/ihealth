@@ -3,11 +3,11 @@ package MODEL.cuentas;
 
 public class CuentaPersonalMedico extends Cuenta{
     
-    String numeroEmpleado;
-    String nombre;
-    String apellido;
-    String telefono;
-    float salario;
+    public String numeroEmpleado;
+    public String nombre;
+    public String apellido;
+    public String telefono;
+    public float salario;
     
     public CuentaPersonalMedico(String contraseña, String numeroEmpleado, String nombre, String apellido, float salario, String telefono){
         super(contraseña);

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ListaPruebasDeLaboratorio {
-    ArrayList<PruebaDeLaboratorio> pruebas;
+    public ArrayList<PruebaDeLaboratorio> pruebas;
     
     public ListaPruebasDeLaboratorio(){
         pruebas = new ArrayList<PruebaDeLaboratorio>();

@@ -4,12 +4,12 @@ package MODEL.cuentas;
 
 
 public class CuentaPaciente extends Cuenta{
-    String matricula;
-    String nombre;
-    String correo;
-    String apellido;
-    String codigoPostal;
-    String fechaNacimiento;
+    public String matricula;
+    public String nombre;
+    public String correo;
+    public String apellido;
+    public String codigoPostal;
+    public String fechaNacimiento;
     
     public CuentaPaciente(String matricula, String contraseña, String correo, String nombre, String apellido, String codigoPostal, String fechaNacimiento){
         super(contraseña);
