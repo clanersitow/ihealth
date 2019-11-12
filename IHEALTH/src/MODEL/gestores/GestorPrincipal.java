@@ -15,15 +15,15 @@ public class GestorPrincipal {
         
         
         try{
-            conexion = Conexion.getConexion();
+            conexion = Conexion.crearConexion();
             consulta = conexion.createStatement();
-            consulta.executeUpdate("INSERT INTO ihealth.pueba VALUES('valor', 'valor')");
+            int rowsUpdated = consulta.executeUpdate("INSERT INTO ihealth.pueba VALUES('valor', 'valor')");
         }catch(SQLException e){
             System.out.println("Error al conectar a la base de datos");
             e.printStackTrace();
         }catch(Exception e){
             System.out.println("Error al ejecutar la consulta");
-            e.printStackTrace();
+            //e.printStackTrace();
         }finally{
             try{
                 consulta.close();

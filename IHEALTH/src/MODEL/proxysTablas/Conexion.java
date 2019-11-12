@@ -9,18 +9,23 @@ public class Conexion {
     private static Connection con;
     private static String usuario = "root";
     private static String password= "AULAS6";
-    private static String url     = "jdbc:myslq://localhost/ihealth";
+    private static String url     = "jdbc:mysql://localhost:3306/ihealth";
     
-    public static Connection getConexion(){
+    public static Connection crearConexion(){
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
             con = DriverManager.getConnection(url, usuario, password);
         }catch(ClassNotFoundException ex){
-            ex.printStackTrace();
+            System.out.println("Error en conexion: " + ex);
+            //ex.printStackTrace();
         }catch(SQLException ex){
+            System.out.println("Error en conexion: "+ ex);
             ex.printStackTrace();
+        }catch(Exception ex){
+            System.out.println("Error en conexion: newInstance");
         }
         
+        System.out.println("Se ha conectado a la base de");
         return con;
     }
     
@@ -30,6 +35,7 @@ public class Conexion {
                 con.close();
             }
         }catch(SQLException ex){
+            System.out.println("Error en conexion: error al cerrar la conexion SQLException");
             ex.printStackTrace();
         }
     }
