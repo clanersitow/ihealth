@@ -4,13 +4,24 @@ import CONTROLLER.*;
 
 public class DIRECTORIO extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DIRECTORIO
-     */
+    ODirectorio oyente;
+    
     public DIRECTORIO() {
+        initComponents();
+    }
+    
+    public DIRECTORIO(PRINCIPAL p) {
         initComponents();
 
         setLocation(250,40);
+        
+        oyente = new ODirectorio(atras,nombre,ubicacion,p,this);
+        atras.addActionListener(oyente);
+        
+        nombre.setEditable(false);
+        ubicacion.setEditable(false);
+        hospitales.addItem("HopitalPrueba");//creacion de prueba, borrar fase final 
+        hospitales.addItem("HopitalPrueba2");//creacion de prueba, borrar fase final 
     }
 
     @SuppressWarnings("unchecked")
@@ -20,17 +31,11 @@ public class DIRECTORIO extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         atras = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        hospitales = new javax.swing.JComboBox();
+        nombre = new javax.swing.JTextField();
+        ubicacion = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -39,22 +44,13 @@ public class DIRECTORIO extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("NOMBRE:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, -1, -1));
 
-        jLabel3.setText("NOMBRE:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 230, -1, -1));
-
-        jLabel4.setText("NOMBRE:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, -1, -1));
-
-        jLabel5.setText("UBICACION:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, -1, -1));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/HP.jpg"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 450, 170));
 
         jLabel6.setText("UBICACION:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, -1, -1));
-
-        jLabel7.setText("UBICACION:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
 
         atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/ATRAS.png"))); // NOI18N
         atras.addActionListener(new java.awt.event.ActionListener() {
@@ -63,30 +59,17 @@ public class DIRECTORIO extends javax.swing.JFrame {
             }
         });
         jPanel1.add(atras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 40, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 90, 170, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        hospitales.setModel(new javax.swing.DefaultComboBoxModel(new String[] { }));
+        jPanel1.add(hospitales, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 150, 40));
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 390, 30));
+
+        ubicacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                ubicacionActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 220, 40));
-
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, 160, -1));
-
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 270, 220, 50));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 160, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 430, 220, 50));
+        jPanel1.add(ubicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 390, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VIEW/IMG/HOSPITALES.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 530));
@@ -109,17 +92,9 @@ public class DIRECTORIO extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_atrasActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void ubicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ubicacionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_ubicacionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,19 +133,13 @@ public class DIRECTORIO extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atras;
+    private javax.swing.JComboBox<String> hospitales;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField ubicacion;
     // End of variables declaration//GEN-END:variables
 }

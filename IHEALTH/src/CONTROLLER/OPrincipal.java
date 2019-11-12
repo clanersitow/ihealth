@@ -11,13 +11,14 @@ public class OPrincipal implements ActionListener{
     JButton eventos;
     JButton medicos;
     JButton instalaciones;
-   
-    public OPrincipal(JButton a,JButton b,JButton c,JButton d,JButton e) {
+    PRINCIPAL pricipal;
+    public OPrincipal(JButton a,JButton b,JButton c,JButton d,JButton e,PRINCIPAL gui) {
         this.login=a;
         this.registrarse=b;
         this.eventos=c;
         this.medicos=d;
         this.instalaciones=e;
+        this.pricipal=gui;
     }
     
     @Override
@@ -25,8 +26,9 @@ public class OPrincipal implements ActionListener{
         Object opc= e.getSource();
        
         if(opc==login){
-            AUTENTICACION login = new AUTENTICACION();
+            AUTENTICACION login = new AUTENTICACION(pricipal);
             login.setVisible(true);
+          //  gui.setVisible(false);  or gui.dispose(); // sirve para serrar la ventana principal
         }
         
         if(opc==registrarse){
@@ -36,20 +38,24 @@ public class OPrincipal implements ActionListener{
         
         if(opc==instalaciones){
             
-            DIRECTORIO hospitales = new DIRECTORIO();
+            DIRECTORIO hospitales = new DIRECTORIO(pricipal);
             hospitales.setVisible(true);
+            pricipal.setVisible(false);
             
             
         }
         
         if(opc==medicos){
-            MEDICOS medicos = new MEDICOS();
+            MEDICOS medicos = new MEDICOS(pricipal);
             medicos.setVisible(true);
+            pricipal.setVisible(false);
+            
         }
         
         if(opc==eventos){
-            AUTENTICACION login = new AUTENTICACION();
-            login.setVisible(true);
+            CARTELERA evento = new CARTELERA(pricipal);//pueste que se cerrara la gui principal se envia la referencia 
+            evento.setVisible(true);                   //para no perderla y abrirla despues
+            pricipal.setVisible(false);
         }
         
     }
