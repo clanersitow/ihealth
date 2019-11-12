@@ -1,7 +1,8 @@
 
 package MODEL.gestores;
 import MODEL.*;
-import MODEL.proxysTablas.Conexion;
+import MODEL.proxysTablas.conexiones.Conexion;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;

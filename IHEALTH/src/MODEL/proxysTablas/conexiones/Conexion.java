@@ -1,17 +1,19 @@
 
-package MODEL.proxysTablas;
+package MODEL.proxysTablas.conexiones;
+
+
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
 
-public class conexion {
+public class Conexion {
     private static Connection con;
     private static String usuario;
     private static String password;
     private static String url;
     
-    public static void getConexion(){
+    public static void crearConexion(){
         
     }
 }
