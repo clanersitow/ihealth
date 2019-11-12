@@ -2,7 +2,6 @@ package CONTROLLER;
 import VIEW.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Enumeration;
 import javax.swing.*;
 
 public class OAutenticacion  implements ActionListener{

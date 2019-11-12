@@ -5,10 +5,19 @@ import javax.swing.*;
 
 public class MEDICOS extends javax.swing.JFrame {
 
+    OMedicos oyente;
+    
     public MEDICOS() {
+        initComponents();       
+    }
+    
+    public MEDICOS(PRINCIPAL p) {
         initComponents();
         
         setLocation(250,40);
+        
+        oyente = new OMedicos(atras,nombre,apellido, licenciatura, especialidad, departamento, almaMater, p,this);
+        atras.addActionListener(oyente);
 
         medicos.addItem("DoctorPrueba"); //creacion de prueba, borrar fase final   
         medicos.addItem("DoctorPrueba2");//creacion de prueba, borrar fase final 

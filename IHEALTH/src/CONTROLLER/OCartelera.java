@@ -5,6 +5,7 @@
  */
 package CONTROLLER;
 
+import VIEW.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -15,26 +16,32 @@ import javax.swing.*;
  */
 public class OCartelera implements ActionListener {
     JButton atras;
-    JTextField nombre ;
-    JTextField apellido ;
-    JTextField licenciatura;
-    JTextField especialidad;
-    JTextField departamento ;
-    JTextField almaMater;
-   
-    public OCartelera(JButton a,JTextField nombre,JTextField apellido,JTextField licenciatura,JTextField especialidad,JTextField departamento,JTextField almaMater) {
+    JTextField descripcion ;
+    JTextField fecha ;
+    JTextField hora;
+    JTextField titulo;
+    JTextField ubicacion ;
+    
+    PRINCIPAL principal;
+    CARTELERA cartelera;
+
+    
+    
+    public OCartelera(JButton a,JTextField descripcion,JTextField fecha,JTextField hora,JTextField titulo,JTextField ubicacion,PRINCIPAL principal, CARTELERA cartelera) {
         this.atras=a;
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.licenciatura=licenciatura;
-        this.especialidad=especialidad;
-        this.departamento=departamento;
-        this.almaMater=almaMater;
+        this.descripcion=descripcion;
+        this.fecha=fecha;
+        this.hora=hora;
+        this.titulo=titulo;
+        this.ubicacion=ubicacion;
+        this.principal=principal;
+        this.cartelera=cartelera;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        principal.setVisible(true);  //boton atras implementado
+        cartelera.setVisible(false);
                 
 //            public void actionPerformed (ActionEvent e){
 //    String seleccion = (String) list.getSelectedItem();

@@ -1,13 +1,25 @@
 
 package VIEW;
 import CONTROLLER.*;
+import javax.swing.JButton;
+import javax.swing.JTextField;
 
 public class CARTELERA extends javax.swing.JFrame {
 
+    OCartelera oyente;
+    
     public CARTELERA() {
         initComponents();
         
+    }
+    
+    public CARTELERA(PRINCIPAL p) {
+        initComponents();
+        
         setLocation(250,40);
+        oyente = new OCartelera(atras,descripcion,fecha, hora, titulo, ubicacion, p,this);
+        atras.addActionListener(oyente);
+        
         
         titulo.setEditable(false);
         descripcion.setEditable(false);
@@ -20,6 +32,8 @@ public class CARTELERA extends javax.swing.JFrame {
         
         
     }
+
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

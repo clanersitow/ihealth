@@ -4,13 +4,19 @@ import CONTROLLER.*;
 
 public class DIRECTORIO extends javax.swing.JFrame {
 
-    /**
-     * Creates new form DIRECTORIO
-     */
+    ODirectorio oyente;
+    
     public DIRECTORIO() {
+        initComponents();
+    }
+    
+    public DIRECTORIO(PRINCIPAL p) {
         initComponents();
 
         setLocation(250,40);
+        
+        oyente = new ODirectorio(atras,nombre,ubicacion,p,this);
+        atras.addActionListener(oyente);
         
         nombre.setEditable(false);
         ubicacion.setEditable(false);
