@@ -10,11 +10,12 @@ public class PRINCIPAL extends javax.swing.JFrame {
 
         setLocation(250,40);
         
-        OPrincipal OPrincipal= new OPrincipal(login,registrarse,eventos,medicos,intalaciones);
+        OPrincipal OPrincipal= new OPrincipal(login,registrarse,eventos,medicos,intalaciones,this);
         login.addActionListener(OPrincipal);
         registrarse.addActionListener(OPrincipal);
         intalaciones.addActionListener(OPrincipal);
         medicos.addActionListener(OPrincipal);
+        eventos.addActionListener(OPrincipal);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

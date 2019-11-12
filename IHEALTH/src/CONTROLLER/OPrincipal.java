@@ -11,13 +11,14 @@ public class OPrincipal implements ActionListener{
     JButton eventos;
     JButton medicos;
     JButton instalaciones;
-   
-    public OPrincipal(JButton a,JButton b,JButton c,JButton d,JButton e) {
+    PRINCIPAL gui;
+    public OPrincipal(JButton a,JButton b,JButton c,JButton d,JButton e,PRINCIPAL gui) {
         this.login=a;
         this.registrarse=b;
         this.eventos=c;
         this.medicos=d;
         this.instalaciones=e;
+        this.gui=gui;
     }
     
     @Override
@@ -25,8 +26,9 @@ public class OPrincipal implements ActionListener{
         Object opc= e.getSource();
        
         if(opc==login){
-            AUTENTICACION login = new AUTENTICACION();
+            AUTENTICACION login = new AUTENTICACION(gui);
             login.setVisible(true);
+          //  gui.setVisible(false);  or gui.dispose(); // sirve para serrar la ventana principal
         }
         
         if(opc==registrarse){
@@ -45,11 +47,12 @@ public class OPrincipal implements ActionListener{
         if(opc==medicos){
             MEDICOS medicos = new MEDICOS();
             medicos.setVisible(true);
+            
         }
         
         if(opc==eventos){
-            AUTENTICACION login = new AUTENTICACION();
-            login.setVisible(true);
+            CARTELERA evento = new CARTELERA();
+            evento.setVisible(true);
         }
         
     }
